@@ -1,25 +1,3 @@
-# ==================== requirements.txt ====================
-# Create this file with the following content:
-
-Flask==3.0.0
-flask-cors==4.0.0
-gunicorn==21.2.0
-
-
-# ==================== render.yaml ====================
-# Create this file for automatic deployment configuration:
-
-services:
-  - type: web
-    name: cloud-risk-webservice
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
-
-
 # ==================== app.py ====================
 # Your main Flask application (already created)
 
